@@ -2,8 +2,7 @@ import styles from "./Card.module.css"
 import {getImageSize} from "~/utils/getImageSize"
 import {CartButton} from "~/components/buttons/cart_button/CartButton"
 import globals from "~/styles/globals.module.css"
-import {useState} from "react"
-import {useIsProductInCart, useProductCart} from "~/store/ProductStore"
+import {useIsProductInCart} from "~/store/ProductStore"
 
 
 interface CardProps {
@@ -13,8 +12,6 @@ interface CardProps {
 
 
 export const Card = ({product}: CardProps) => {
-  const products = useProductCart();
-  const [renderAmount, setRenderAmount] = useState(0);
   const isActive = useIsProductInCart();
 
   return (

@@ -3,9 +3,13 @@ import {ProductList} from "~/components/product_list/ProductList"
 import styles from '../styles/index.module.css'
 import {ShoppingCart} from "~/components/shopping_cart/ShoppingCart"
 import data from "~/data.json";
-import {useCallback, useEffect, useState} from "react"
-import {useLoadData, useProductCart, useDisplayConfirmation} from "~/store/ProductStore"
-import  {Confirmation} from "~/components/confirmation/Confirmation"
+import {useEffect} from "react"
+import {
+  useDisplayConfirmation,
+  useLoadData,
+  useProductCart
+} from "~/store/ProductStore"
+import {Confirmation} from "~/components/confirmation/Confirmation"
 import {Modal} from "~/components/modal/Modal"
 
 
@@ -46,16 +50,14 @@ export default function Index() {
 
   }, [displayConfirmation]);
 
-
-
-
   return (
-    <main className={`${styles.container} ${displayConfirmation && styles.modal_open}`}>
+    <main
+      className={`${styles.container} ${displayConfirmation && styles.modal_open}`}>
       <Modal isOpen={displayConfirmation}>
         <Confirmation display={displayConfirmation}/>
       </Modal>
-      <ProductList />
-      <ShoppingCart />
+      <ProductList/>
+      <ShoppingCart/>
     </main>
   );
 }

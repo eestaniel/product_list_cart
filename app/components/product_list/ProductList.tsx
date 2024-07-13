@@ -2,12 +2,10 @@ import styles from "./ProductList.module.css";
 import globals from "../../styles/globals.module.css";
 import {Card} from "~/components/card/Card"
 import {useProductData} from "~/store/ProductStore"
-import {useNavigation} from "react-router"
 
 
 export const ProductList = () => {
   const productData = useProductData()
-
 
   return (
     <div className={styles.main_content}>
