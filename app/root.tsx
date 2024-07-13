@@ -3,14 +3,22 @@ import "./tailwind.css";
 import './styles/globals.module.css'
 import './styles/reset.css'
 import './styles/root.css'
+import {LinksFunction} from "@remix-run/node"
 
+export const links: LinksFunction = () => {
+  return [
+    { rel: "icon", href: "/assets/images/favicon-32x32.png", type: "image/png" }
+  ];
+};
 
 export function Layout({children}: { children: React.ReactNode }) {
   return (
     <html lang="en">
-    <head title={'Product Cart with List'}>
+    <head>
+      <title>Product List with Cart</title>
       <meta charSet="utf-8"/>
       <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
       <Meta/>
       <Links/>
     </head>

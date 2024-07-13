@@ -1,40 +1,42 @@
-# Welcome to Remix!
+# Frontend Mentor - Product list with cart solution
 
-- 📖 [Remix docs](https://remix.run/docs)
+This is a solution to the [Product list with cart challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-list-with-cart-5MmqLVAp_d). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Development
+## Table of contents
 
-Run the dev server:
+- [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+- [My process](#my-process)
+    - [Built with](#built-with)
 
-```shellscript
-npm run dev
-```
 
-## Deployment
+## Overview
 
-First, build your app for production:
+### The challenge
 
-```sh
-npm run build
-```
+Users should be able to:
 
-Then run the app in production mode:
+- Add items to the cart and remove them
+- Increase/decrease the number of items in the cart
+- See an order confirmation modal when they click "Confirm Order"
+- Reset their selections when they click "Start New Order"
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
 
-```sh
-npm start
-```
+### Screenshot
 
-Now you'll need to pick a host to deploy it to.
+![](./public/design/desktop-design-empty.jpg)
 
-### DIY
+### Links
 
-If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
+- Solution URL: [Solution](https://your-solution-url.com)
+- Live Site URL: [https://product-list-ee.eestaniel.com/](https://product-list-ee.eestaniel.com/)
 
-Make sure to deploy the output of `npm run build`
+## My process
 
-- `build/server`
-- `build/client`
+### Built with
 
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever css framework you prefer. See the [Vite docs on css](https://vitejs.dev/guide/features.html#css) for more information.
+- Remix - React framework
+- Framer Motion - For animations
