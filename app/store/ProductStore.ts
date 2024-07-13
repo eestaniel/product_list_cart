@@ -35,6 +35,7 @@ interface ProductStore {
   displayConfirmation: boolean;
   setDisplayConfirmation: (bool: boolean) => void;
 
+  removeFromCart: (productName: string) => void;
   resetCart: () => void;
 
 }
@@ -111,6 +112,13 @@ export const useProductStore = create<ProductStore>((set, get) => ({
     return {displayConfirmation: bool};
   }),
 
+  // Remove from cart
+  removeFromCart: (productName) => set((state) => {
+    const productCart = {...state.productCart};
+    delete productCart[productName];
+    return {productCart};
+  }),
+
   // Reset cart
   resetCart: () => set(() => {
     return {productCart: {}};
@@ -133,4 +141,5 @@ export const useCalculateTotalPrice = () => useProductStore((state) => state.cal
 export const useCalculateTotalItems = () => useProductStore((state) => state.calculateTotalItems);
 export const useDisplayConfirmation = () => useProductStore((state) => state.displayConfirmation);
 export const useSetDisplayConfirmation = () => useProductStore((state) => state.setDisplayConfirmation);
+export const useRemoveFromCart = () => useProductStore((state) => state.removeFromCart);
 export const useResetCart = () => useProductStore((state) => state.resetCart);

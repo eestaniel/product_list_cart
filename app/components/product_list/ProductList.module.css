@@ -12,32 +12,61 @@
     gap:            2rem;
 
 
-    h1 {
+    .list_container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
 
-    }
-
-
-    .list {
-      display:         flex;
-      flex-direction:  column;
-      gap:             1.5rem;
-      list-style-type: none;
-      padding:         0;
-      margin:          0;
-
-
-      .product_item {
+      .list_item {
         display:        flex;
         flex-direction: column;
         height:         19.938rem;
-
         gap:            2.375rem;
+      }
+
+    }
+  }
+}
 
 
+
+
+@media screen and (min-width: 400px) {
+  .main_content {
+
+
+    .product_list {
+
+
+      .list_container {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .list_item {
+
+        }
       }
     }
-
   }
 
+}
+
+@media screen and (min-width: 768px) {
+  .main_content {
+
+
+    .product_list {
+
+
+      .list_container {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .list_item {
+
+        }
+      }
+    }
+  }
 
 }

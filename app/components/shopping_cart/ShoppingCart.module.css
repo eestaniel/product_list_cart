@@ -19,6 +19,18 @@
   }
 
 
+  .empty_placeholder {
+    display:        flex;
+    flex-direction: column;
+    align-items:    center;
+
+
+    p {
+      color: var(--rose-500);
+    }
+  }
+
+
   /* Cart List */
 
 
@@ -28,12 +40,21 @@
     gap:            1rem;
 
 
+    .divider {
+      border-color: var(--rose-100);
+    }
+    .divider:last-child {
+      display: none;
+    }
+
+
     .added_item {
       display:         flex;
       flex-direction:  row;
       flex-grow:       1;
       justify-content: space-between;
       align-items:     center;
+
 
       /* Modal Closed */
 
@@ -53,6 +74,7 @@
           .quantity {
             color:  var(--red);
             height: fit-content;
+            width:  1.313rem;
           }
 
 
@@ -106,6 +128,10 @@
     }
   }
 
+  .main_divider {
+    border-color: var(--rose-100);
+  }
+
 
   /* Total Section */
 
@@ -129,6 +155,7 @@
     padding:          1rem;
     background-color: var(--rose-50);
     border-radius:    0.75rem;
+    align-items:      center;
 
 
     .icon_text_group {
@@ -136,6 +163,98 @@
       flex-direction: row;
       gap:            0.5rem;
     }
+  }
+
+}
+
+
+@media screen and (min-width: 768px) {
+  .cart_container {
+
+
+    h3 {
+    }
+
+
+    .empty_placeholder {
+      p {
+      }
+    }
+
+
+    /* Cart List */
+
+
+    .added_items_list {
+
+      hr {
+      }
+
+
+      .added_item {
+
+
+        /* Modal Closed */
+
+
+        .name_quantity_price_group {
+
+          .quantity_price_group {
+
+
+            .quantity {
+            }
+
+
+            .price_total {
+            }
+          }
+        }
+
+
+        /* Modal Open Confirmation */
+
+
+        .item_confirmation_group {
+
+
+          .img_header_group {
+
+
+            img {
+            }
+
+
+            .name_quantity_price_group {
+              .quantity_price_group {
+                .quantity {
+                }
+              }
+
+            }
+          }
+        }
+      }
+    }
+
+
+    /* Total Section */
+
+
+    .order_total_group {
+    }
+
+
+    /* Carbon Info Section */
+
+
+    .carbon_neutral_container {
+
+
+      .icon_text_group {
+      }
+    }
+
   }
 
 }
