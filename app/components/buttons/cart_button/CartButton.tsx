@@ -50,7 +50,7 @@ export const CartButton = ({
 
   return (
     <div ref={cartButtonRef}>
-      <button
+      <div
         className={`
         ${styles.cart_button_container} 
         ${globals.text_preset_4}
@@ -76,7 +76,7 @@ export const CartButton = ({
             </div>
           </>
         )}
-      </button>
+      </div>
     </div>
   );
 };
