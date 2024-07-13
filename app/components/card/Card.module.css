@@ -103,3 +103,34 @@
   }
 
 }
+
+
+@media screen and (min-width: 1440px) {
+  .img_button_group {
+    width: fit-content;
+    img {
+      height: 15rem;
+      width: auto;
+    }
+
+
+    /* Active image */
+
+
+    .active {
+    }
+
+
+    .button_container {
+
+    }
+  }
+
+
+  .item_info_group {
+
+    .price {
+    }
+  }
+
+}

@@ -109,6 +109,7 @@ export const ShoppingCart = ({confirmation = false}: ShoppingCartProps) => {
             </React.Fragment>
           ))}
         </ul>
+        <hr className={styles.main_divider}/>
         <div
           className={`${styles.order_total_group}`}>
           <p className={globals.text_preset_4}>Order Total</p>

@@ -35,7 +35,7 @@
 .text_preset_2 {
   font-family:    "Red Hat Text", serif;
   font-size:      1.5rem;
-  line-height:    normal;
+  line-height:    125%;
   letter-spacing: 0;
   font-weight:    700;
   color:          var(--rose-900);
@@ -45,7 +45,7 @@
 .text_preset_3 {
   font-family:    "Red Hat Text", serif;
   font-size:      1rem;
-  line-height:    normal;
+  line-height:    150%;
   letter-spacing: 0;
   font-weight:    600;
   color:          var(--rose-900);
@@ -55,7 +55,7 @@
 .text_preset_4 {
   font-family:    "Red Hat Text", serif;
   font-size:      0.875rem;
-  line-height:    normal;
+  line-height:    135%;
   letter-spacing: 0;
   font-weight:    400;
   color:          var(--rose-900);
@@ -65,7 +65,7 @@
 .text_preset_4_bold {
   font-family:    "Red Hat Text", serif;
   font-size:      0.875rem;
-  line-height:   normal;
+  line-height:   135%;
   letter-spacing: 0;
   font-weight:    600;
   color:          var(--rose-900);

@@ -42,3 +42,15 @@
   }
 
 }
+
+
+@media screen and (min-width: 768px) {
+  .modalOverlay {
+
+  }
+
+  .modalContent {
+    max-width: 37rem;
+  }
+
+}

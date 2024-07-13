@@ -1,6 +1,7 @@
 
 .confirmation_cart_container {
   background-color: var(--rose-50) !important;
+  width: 100%;
 }
 
 
@@ -168,9 +169,13 @@
 }
 
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1440px) {
+  .confirmation_cart_container{
+    max-width: revert !important;
+  }
   .cart_container {
-
+    max-width: 24rem;
+    height: fit-content;
 
     h3 {
     }

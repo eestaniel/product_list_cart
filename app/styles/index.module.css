@@ -14,3 +14,11 @@
     gap: 2rem;
   }
 }
+
+@media screen and (min-width: 1440px){
+  .container {
+    flex-direction: row;
+    align-items: revert;
+    justify-content: center;
+  }
+}
