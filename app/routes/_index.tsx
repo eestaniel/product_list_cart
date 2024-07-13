@@ -14,6 +14,7 @@ import { Confirmation } from "~/components/confirmation/Confirmation";
 import { Modal } from "~/components/modal/Modal";
 import { motion } from "framer-motion";
 
+
 export const meta: MetaFunction = () => {
   return [
     { title: "New Remix App" },
@@ -51,20 +52,8 @@ export default function Index() {
       <Modal isOpen={displayConfirmation}>
         <Confirmation display={displayConfirmation} />
       </Modal>
-      <motion.div
-        initial={{opacity: 0, scale: 0.5}}
-        animate={{opacity: 1, scale: 1}}
-        transition={{
-          ease: "easeInOut",
-          stiffness: 260,
-          damping: 20,
-        }}
-        onAnimationStart={() => setIsProductListVisible(true)}
-      >
-        <ProductList />
-      </motion.div>
-      {isProductListVisible && <ShoppingCart />}
-      {!isProductListVisible && <div>Loading...</div>}
+      <ProductList />
+      <ShoppingCart />
     </main>
   );
 }

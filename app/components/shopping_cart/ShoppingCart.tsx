@@ -33,7 +33,10 @@ export const ShoppingCart = ({confirmation = false}: ShoppingCartProps) => {
     if (!confirmation) {
       return (
         <>
-          <div
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
             className={`${styles.name_quantity_price_group}`}>
             <h4 className={globals.text_preset_4_bold}>{name}</h4>
             <div className={styles.quantity_price_group}>
@@ -44,7 +47,7 @@ export const ShoppingCart = ({confirmation = false}: ShoppingCartProps) => {
               <p
                 className={`${globals.text_preset_4_bold} ${styles.price_total}`}>${products[name].total.toFixed(2)}</p>
             </div>
-          </div>
+          </motion.div>
           <div className={styles.remove_svg_container}
                 onClick={() => removeFromCart(name)}
           >
@@ -79,13 +82,9 @@ export const ShoppingCart = ({confirmation = false}: ShoppingCartProps) => {
   const emptyDisplay = () => {
     return(
       <motion.div
-        initial={{opacity: 0, scale: 0.5}}
-        animate={{opacity: 1, scale: 1}}
-        transition={{
-          ease: "easeInOut",
-          stiffness: 260,
-          damping: 20,
-        }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
         className={`${styles.cart_container}`}>
         <h3 className={globals.text_preset_2}>
           Your Cart ({calculateTotalItems()})
