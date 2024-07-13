@@ -4,7 +4,7 @@ import styles from '../styles/index.module.css'
 import {ShoppingCart} from "~/components/shopping_cart/ShoppingCart"
 import data from "~/data.json";
 import {useEffect} from "react"
-import {useLoadData, useProductCart, useStoreData} from "~/store/ProductStore"
+import {useLoadData, useProductCart} from "~/store/ProductStore"
 
 export const meta: MetaFunction = () => {
   return [
