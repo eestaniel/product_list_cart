@@ -11,6 +11,7 @@ import {
 } from "~/store/ProductStore"
 import {PrimaryButton} from "~/components/buttons/primary_button/PrimaryButton"
 import React from "react"
+import { motion } from "framer-motion"
 
 
 interface ShoppingCartProps {
@@ -77,7 +78,14 @@ export const ShoppingCart = ({confirmation = false}: ShoppingCartProps) => {
 
   const emptyDisplay = () => {
     return(
-      <div
+      <motion.div
+        initial={{opacity: 0, scale: 0.5}}
+        animate={{opacity: 1, scale: 1}}
+        transition={{
+          ease: "easeInOut",
+          stiffness: 260,
+          damping: 20,
+        }}
         className={`${styles.cart_container}`}>
         <h3 className={globals.text_preset_2}>
           Your Cart ({calculateTotalItems()})
@@ -88,13 +96,17 @@ export const ShoppingCart = ({confirmation = false}: ShoppingCartProps) => {
         </div>
 
 
-      </div>
+      </motion.div>
     )
   }
 
   const regularDisplay = () => {
     return (
-      <div
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+
         className={`${styles.cart_container}`}>
         <h3 className={globals.text_preset_2}>Your Cart
           ({calculateTotalItems()})</h3>
@@ -129,14 +141,14 @@ export const ShoppingCart = ({confirmation = false}: ShoppingCartProps) => {
         </div>
         <PrimaryButton label={"Confirm Order"}
                        onClick={() => setDisplayConfirmation(true)}/>
-      </div>
+      </motion.div>
     )
   }
 
   const confirmationDisplay = () => {
     return (
       <>
-        <div
+        <motion.div
           className={`${styles.cart_container} ${styles.confirmation_cart_container}`}>
           <ul
             className={`${styles.added_items_list} `}>
@@ -157,7 +169,7 @@ export const ShoppingCart = ({confirmation = false}: ShoppingCartProps) => {
               className={globals.text_preset_2}>${calculateTotal().toFixed(2)}</p>
           </div>
 
-        </div>
+        </motion.div>
       </>
 
     )

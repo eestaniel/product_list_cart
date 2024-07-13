@@ -1,3 +1,9 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 2.375rem;
+}
+
 .img_button_group {
   display:        flex;
   flex-direction: column;
