@@ -1,9 +1,6 @@
 import styles from "./ProductList.module.css";
 import data from "~/data.json";
 import globals from "../../globals.module.css";
-import {CartButton} from "~/components/buttons/cart_button/CartButton"
-import {getImageSize} from "~/utils/getImageSize"
-import {useProductStore} from "~/store/ProductStore"
 import {Card} from "~/components/card/Card"
 
 export const ProductList = () => {

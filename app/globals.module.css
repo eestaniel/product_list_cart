@@ -15,15 +15,15 @@
 
 
 @font-face {
-  font-family: 'Red Hat Text';
-  src: url('/assets/fonts/RedHatText-VariableFont_wght.ttf') format('truetype');
-  font-style: normal;
+  font-family: "Red Hat Text";
+  src:         url("/assets/fonts/RedHatText-VariableFont_wght.ttf") format("truetype");
+  font-style:  normal;
   font-weight: 100 900;
 }
 
 
 .text_preset_1 {
-  font-family: 'Red Hat Text', serif;
+  font-family:    "Red Hat Text", serif;
   font-size:      3.5rem;
   line-height:    120%;
   letter-spacing: 0;
@@ -33,9 +33,9 @@
 
 
 .text_preset_2 {
-  font-family: 'Red Hat Text', serif;
+  font-family:    "Red Hat Text", serif;
   font-size:      1.5rem;
-  line-height:    125%;
+  line-height:    normal;
   letter-spacing: 0;
   font-weight:    700;
   color:          var(--rose-900);
@@ -43,9 +43,9 @@
 
 
 .text_preset_3 {
-  font-family: 'Red Hat Text', serif;
+  font-family:    "Red Hat Text", serif;
   font-size:      1rem;
-  line-height:    150%;
+  line-height:    normal;
   letter-spacing: 0;
   font-weight:    600;
   color:          var(--rose-900);
@@ -53,27 +53,31 @@
 
 
 .text_preset_4 {
-  font-family: 'Red Hat Text', serif;
+  font-family:    "Red Hat Text", serif;
   font-size:      0.875rem;
-  line-height:    150%;
+  line-height:    normal;
   letter-spacing: 0;
   font-weight:    400;
   color:          var(--rose-900);
 }
-.text_preset_5 {
-  font-family: 'Red Hat Text', serif;
+
+
+.text_preset_4_bold {
+  font-family:    "Red Hat Text", serif;
   font-size:      0.875rem;
-  line-height:    150%;
+  line-height:   normal;
   letter-spacing: 0;
-  font-weight:    700;
+  font-weight:    600;
   color:          var(--rose-900);
 }
 
+
+
 body {
-  display: flex;
-  flex-direction: column;
-  width: 16rem;
-  gap: 2rem;
+  display:          flex;
+  flex-direction:   column;
+  width:            16rem;
+  gap:              2rem;
   background-color: var(--rose-50);
 
 }

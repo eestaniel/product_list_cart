@@ -3,8 +3,8 @@ import {getImageSize} from "~/utils/getImageSize"
 import {CartButton} from "~/components/buttons/cart_button/CartButton"
 import globals from "~/globals.module.css"
 import {useEffect, useState} from "react"
-import {useProducts} from "~/store/ProductStore"
-import {isActive} from "~/utils/isActive"
+import {useProductCart, useIsProductInCart} from "~/store/ProductStore"
+
 
 interface CardProps {
   product: any
@@ -13,14 +13,10 @@ interface CardProps {
 
 
 export const Card = ({product}: CardProps) => {
-  const products = useProducts();
+  const products = useProductCart();
   const [renderAmount, setRenderAmount] = useState(0);
+  const isActive = useIsProductInCart();
 
-  useEffect(() => {
-    if (products[product.name] > 0) {
-      console.log("product.name", products)
-    }
-  }, [products]);
 
   return (
     <>

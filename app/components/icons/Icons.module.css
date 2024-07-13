@@ -21,7 +21,7 @@
 
 
 .remove_icon {
-  border:          2px solid var(--rose-400);
+  border:          1px solid var(--rose-400);
   border-radius:   999px;
   display:         flex;
   flex-direction:  row;

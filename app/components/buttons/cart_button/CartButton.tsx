@@ -2,8 +2,7 @@ import {useCallback, useRef, useState} from "react";
 import styles from "./CartButton.module.css";
 import globals from "~/globals.module.css";
 import {AddIcon, IconAddToCart, SubtractIcon} from "~/components/icons/Icons";
-import {useAddProduct, useRemoveProduct, useProducts} from "~/store/ProductStore";
-import {isActive} from "~/utils/isActive"
+import {useAddProduct, useRemoveProduct, useProductCart, useIsProductInCart} from "~/store/ProductStore";
 
 interface CartButtonProps {
   product_name: string;
@@ -18,30 +17,30 @@ export const CartButton = ({
   const cartButtonRef = useRef(null);
   const addProduct = useAddProduct();
   const removeProduct = useRemoveProduct();
-  const products = useProducts();
-
+  const ProductCart = useProductCart();
+  const isActive = useIsProductInCart();
 
 
   const handleAddToCart = useCallback((event: {
     stopPropagation: () => void;
   }) => {
     event.stopPropagation();
-    addProduct({product: product_name});
+    addProduct(product_name)
   }, [product_name, addProduct]);
 
   const handleIncrement = useCallback((event: {
     stopPropagation: () => void;
   }) => {
-    event.stopPropagation();
-    addProduct({product: product_name})
 
+    event.stopPropagation();
+    addProduct(product_name)
   }, [product_name, addProduct]);
 
   const handleDecrement = useCallback((event: {
     stopPropagation: () => void;
   }) => {
     event.stopPropagation();
-    removeProduct({product: product_name});
+    removeProduct(product_name);
   }, [product_name, removeProduct]);
 
   return (
@@ -52,7 +51,7 @@ export const CartButton = ({
         ${globals.text_preset_4}
         ${isActive(product_name) && styles.active_button}
         `}
-        onClick={ isActive(product_name) ? handleAddToCart : handleIncrement}
+        onClick={!isActive(product_name) ? handleAddToCart : undefined}
       >
         {!isActive(product_name) ? (
           <>
@@ -66,7 +65,7 @@ export const CartButton = ({
             <div onClick={handleDecrement}>
               <SubtractIcon/>
             </div>
-            {products[product_name]}
+            <span>{ProductCart[product_name].quantity}</span>
             <div onClick={handleIncrement}>
               <AddIcon/>
             </div>

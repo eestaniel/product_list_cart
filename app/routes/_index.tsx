@@ -1,9 +1,10 @@
 import type {MetaFunction} from "@remix-run/node";
-import {PrimaryButton} from "~/components/buttons/primary_button/PrimaryButton"
-import {CartButton} from "~/components/buttons/cart_button/CartButton"
-import {RemoveIcon} from "~/components/icons/Icons"
 import {ProductList} from "~/components/product_list/ProductList"
 import styles from '../styles/index.module.css'
+import {ShoppingCart} from "~/components/shopping_cart/ShoppingCart"
+import data from "~/data.json";
+import {useEffect} from "react"
+import {useLoadData, useProductCart, useStoreData} from "~/store/ProductStore"
 
 export const meta: MetaFunction = () => {
   return [
@@ -13,15 +14,30 @@ export const meta: MetaFunction = () => {
 };
 
 export const loader = () => {
-
-
-
   return null
 }
 export default function Index() {
+
+  const LoadData = useLoadData()
+  const products = useProductCart()
+
+  useEffect(() => {
+    if (data) {
+      LoadData(data)
+    }
+  }, []);
+
+  useEffect(() => {
+    if (products) {
+      console.log(products)
+
+    }
+  }, [products]);
+
   return (
     <main className={styles.container}>
-      {ProductList()}
+      <ProductList />
+      <ShoppingCart />
     </main>
   );
 }
