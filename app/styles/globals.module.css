@@ -65,12 +65,11 @@
 .text_preset_4_bold {
   font-family:    "Red Hat Text", serif;
   font-size:      0.875rem;
-  line-height:   135%;
+  line-height:    135%;
   letter-spacing: 0;
   font-weight:    600;
   color:          var(--rose-900);
 }
-
 
 
 body {
@@ -79,7 +78,10 @@ body {
   width:            16rem;
   gap:              2rem;
   background-color: var(--rose-50);
+  min-height:       100vh;
+
 }
+
 
 .modal_open {
   overflow-y: hidden;
