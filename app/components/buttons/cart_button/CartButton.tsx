@@ -1,37 +1,48 @@
-import { useState, useEffect, useRef } from "react";
+import {useCallback, useRef, useState} from "react";
 import styles from "./CartButton.module.css";
-import globals from '~/globals.module.css';
-import { IconAddToCart, SubtractIcon, AddIcon } from "~/components/icons/Icons";
+import globals from "~/globals.module.css";
+import {AddIcon, IconAddToCart, SubtractIcon} from "~/components/icons/Icons";
+import {useAddProduct, useRemoveProduct, useProducts} from "~/store/ProductStore";
+import {isActive} from "~/utils/isActive"
 
-export const CartButton = () => {
-  const [active, setActive] = useState(false);
-  const [value, setValue] = useState(1);
+interface CartButtonProps {
+  product_name: string;
+}
+
+
+export const CartButton = ({
+                             product_name,
+                           }: CartButtonProps) => {
+
+  /* -------Import States------- */
   const cartButtonRef = useRef(null);
+  const addProduct = useAddProduct();
+  const removeProduct = useRemoveProduct();
+  const products = useProducts();
 
-  const handleIncrement = (event: { stopPropagation: () => void; }) => {
+
+
+  const handleAddToCart = useCallback((event: {
+    stopPropagation: () => void;
+  }) => {
     event.stopPropagation();
-    setValue(value + 1);
-  };
+    addProduct({product: product_name});
+  }, [product_name, addProduct]);
 
-  const handleDecrement = (event: { stopPropagation: () => void; }) => {
+  const handleIncrement = useCallback((event: {
+    stopPropagation: () => void;
+  }) => {
     event.stopPropagation();
-    if (value > 0) {
-      setValue(value - 1);
-    }
-  };
+    addProduct({product: product_name})
 
-  const handleClickOutside = (event: { target: any; }) => {
-    if (cartButtonRef.current && !cartButtonRef.current.contains(event.target)) {
-      setActive(false);
-    }
-  };
+  }, [product_name, addProduct]);
 
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+  const handleDecrement = useCallback((event: {
+    stopPropagation: () => void;
+  }) => {
+    event.stopPropagation();
+    removeProduct({product: product_name});
+  }, [product_name, removeProduct]);
 
   return (
     <div ref={cartButtonRef}>
@@ -39,25 +50,25 @@ export const CartButton = () => {
         className={`
         ${styles.cart_button_container} 
         ${globals.text_preset_4}
-        ${active && styles.active_button}
+        ${isActive(product_name) && styles.active_button}
         `}
-        onClick={() => setActive(!active)}
+        onClick={ isActive(product_name) ? handleAddToCart : handleIncrement}
       >
-        {!active ? (
+        {!isActive(product_name) ? (
           <>
             <div className={styles.svg_container}>
-              <IconAddToCart />
+              <IconAddToCart/>
             </div>
             <span>Add to Cart</span>
           </>
         ) : (
           <>
             <div onClick={handleDecrement}>
-              <SubtractIcon />
+              <SubtractIcon/>
             </div>
-            {value}
+            {products[product_name]}
             <div onClick={handleIncrement}>
-              <AddIcon />
+              <AddIcon/>
             </div>
           </>
         )}

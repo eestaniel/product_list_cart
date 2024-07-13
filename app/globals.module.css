@@ -15,7 +15,7 @@
 
 
 @font-face {
-  font-family: "Red Hat Text", serif;
+  font-family: "Red HatText", serif;
   src:         url("/public/assets/fonts/RedHatText-VariableFont_wght.ttf");
   font-style:  normal;
   font-weight: 100 900;
@@ -23,6 +23,7 @@
 
 
 .text_preset_1 {
+  font-family: 'Red Hat Text', serif;
   font-size:      3.5rem;
   line-height:    120%;
   letter-spacing: 0;
@@ -32,6 +33,7 @@
 
 
 .text_preset_2 {
+  font-family: 'Red Hat Text', serif;
   font-size:      1.5rem;
   line-height:    125%;
   letter-spacing: 0;
@@ -41,6 +43,7 @@
 
 
 .text_preset_3 {
+  font-family: 'Red Hat Text', serif;
   font-size:      1rem;
   line-height:    150%;
   letter-spacing: 0;
@@ -50,13 +53,15 @@
 
 
 .text_preset_4 {
+  font-family: 'Red Hat Text', serif;
   font-size:      0.875rem;
   line-height:    150%;
   letter-spacing: 0;
   font-weight:    400;
   color:          var(--rose-900);
 }
-.text_preset_4 {
+.text_preset_5 {
+  font-family: 'Red Hat Text', serif;
   font-size:      0.875rem;
   line-height:    150%;
   letter-spacing: 0;
@@ -67,9 +72,8 @@
 body {
   display: flex;
   flex-direction: column;
-  margin-left: 5rem;
-  margin-top: 5rem;
   width: 16rem;
   gap: 2rem;
   background-color: var(--rose-50);
+
 }

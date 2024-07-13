@@ -2,7 +2,8 @@ import type {MetaFunction} from "@remix-run/node";
 import {PrimaryButton} from "~/components/buttons/primary_button/PrimaryButton"
 import {CartButton} from "~/components/buttons/cart_button/CartButton"
 import {RemoveIcon} from "~/components/icons/Icons"
-
+import {ProductList} from "~/components/product_list/ProductList"
+import styles from '../styles/index.module.css'
 
 export const meta: MetaFunction = () => {
   return [
@@ -19,11 +20,8 @@ export const loader = () => {
 }
 export default function Index() {
   return (
-    <>
-      <h1>Welcome to Remix!</h1>
-      <PrimaryButton label={'Placeholder'}/>
-      <CartButton/>
-      <RemoveIcon/>
-    </>
+    <main className={styles.container}>
+      {ProductList()}
+    </main>
   );
 }

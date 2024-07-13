@@ -1,0 +1,35 @@
+.img_button_group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  img {
+    width: 100%;
+    border-radius: 0.5rem;
+
+  }
+
+  /* Active image */
+  .active {
+    outline: 0.125rem solid var(--red);
+  }
+
+  .button_container {
+    position: absolute;
+    bottom: -1.406rem;
+  }
+
+
+}
+
+
+.item_info_group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  .price {
+    color: var(--red) ;
+  }
+
+}

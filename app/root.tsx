@@ -1,5 +1,5 @@
 import {
-  Links,
+  Links, LiveReload,
   Meta,
   Outlet,
   Scripts,

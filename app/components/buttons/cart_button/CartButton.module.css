@@ -29,9 +29,11 @@
   background-color: var(--red);
   color: white;
   justify-content: space-between;
+  outline-color: var(--red);
 
   &:hover {
     background-color: var(--red);
     color: white;
+
   }
 }
