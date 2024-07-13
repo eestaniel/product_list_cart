@@ -176,12 +176,15 @@
   .cart_container {
     max-width: 24rem;
     height: fit-content;
+    padding: 1.5rem;
 
     h3 {
     }
 
 
     .empty_placeholder {
+      padding-block: 1rem;
+      gap: 1rem;
       p {
       }
     }
