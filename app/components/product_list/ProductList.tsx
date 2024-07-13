@@ -15,7 +15,7 @@ export const ProductList = () => {
         <h1 className={globals.text_preset_1}>Desserts</h1>
         <ul className={styles.list}>
           {data.map((product, index) => (
-            <li key={index} className={styles.product_item}>
+            <li key={index} className={`${globals.text_preset_1} ${styles.list}`}>
               <Card product={product}/>
             </li>
           ))}
