@@ -169,7 +169,7 @@
 }
 
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1200px) {
   .confirmation_cart_container{
     max-width: revert !important;
   }
