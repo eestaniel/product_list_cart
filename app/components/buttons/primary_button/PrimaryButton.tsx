@@ -1,14 +1,18 @@
 import styles from "./PrimaryButton.module.css"
-import globals from '~/globals.module.css'
+import globals from '~/styles/globals.module.css'
 
 interface PrimaryButtonProps {
-  label: string
+  label: string,
+  onClick: () => any
 
 }
 
-export const PrimaryButton = ({label}:PrimaryButtonProps) => {
+export const PrimaryButton = ({label, onClick}:PrimaryButtonProps) => {
  return (
-  <button className={`${styles.button_container} ${globals.text_preset_3}`}>
+  <button
+    className={`${styles.button_container} ${globals.text_preset_3}`}
+    onClick={onClick}
+  >
     {label}
   </button>
  )

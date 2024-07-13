@@ -1,0 +1,26 @@
+.confirmation_container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .header_group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .svg_container {
+      height: 3rem;
+      width: 3rem;
+    }
+
+    .text_group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      p {
+        color: var(--rose-500);
+        font-weight: 400;
+      }
+    }
+  }
+}

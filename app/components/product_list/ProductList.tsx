@@ -1,5 +1,5 @@
 import styles from "./ProductList.module.css";
-import globals from "../../globals.module.css";
+import globals from "../../styles/globals.module.css";
 import {Card} from "~/components/card/Card"
 import {useProductData} from "~/store/ProductStore"
 

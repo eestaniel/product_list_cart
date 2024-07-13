@@ -1,7 +1,7 @@
 import styles from "./Card.module.css"
 import {getImageSize} from "~/utils/getImageSize"
 import {CartButton} from "~/components/buttons/cart_button/CartButton"
-import globals from "~/globals.module.css"
+import globals from "~/styles/globals.module.css"
 import {useEffect, useState} from "react"
 import {useProductCart, useIsProductInCart} from "~/store/ProductStore"
 
