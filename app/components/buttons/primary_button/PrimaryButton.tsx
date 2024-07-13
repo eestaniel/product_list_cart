@@ -3,7 +3,7 @@ import globals from '~/styles/globals.module.css'
 
 interface PrimaryButtonProps {
   label: string,
-  onClick: () => any
+  onClick: () => void
 
 }
 

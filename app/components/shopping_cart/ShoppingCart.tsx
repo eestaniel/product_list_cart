@@ -106,7 +106,7 @@ export const ShoppingCart = ({confirmation = false}: ShoppingCartProps) => {
           </div>
         </div>
         <PrimaryButton label={"Confirm Order"}
-                       onClick={setDisplayConfirmation}/>
+                      onClick={() => setDisplayConfirmation(true)}/>
       </div>
     )
   }
