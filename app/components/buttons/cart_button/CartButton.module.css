@@ -1,0 +1,37 @@
+.cart_button_container {
+  background-color: white;
+  outline: 1px solid var(--rose-400);
+  display: flex;
+  flex-direction: row;
+  padding: 0.75rem;
+  border-radius: 999px;
+  gap: 0.5rem;
+  width: 10rem;
+  justify-content: center;
+
+  .svg_container {
+    height: 1.25rem;
+    width: 1.25rem;
+    svg path {
+      fill: var(--red);
+    }
+  }
+
+
+  /* Hover Effect */
+  &:hover {
+    color: var(--red);
+    outline-color: var(--red);
+  }
+}
+
+.active_button {
+  background-color: var(--red);
+  color: white;
+  justify-content: space-between;
+
+  &:hover {
+    background-color: var(--red);
+    color: white;
+  }
+}

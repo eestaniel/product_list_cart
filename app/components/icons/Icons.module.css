@@ -1,0 +1,50 @@
+.add_subtract_icon {
+  width:           1.25rem;
+  height:          1.25rem;
+  border:          2px solid white;
+  display:         flex;
+  flex-direction:  row;
+  justify-content: center;
+  align-items:     center;
+  border-radius:   999px;
+
+
+  &:hover {
+    background-color: white;
+
+
+    svg path {
+      fill: var(--red);
+    }
+  }
+}
+
+
+.remove_icon {
+  border:          2px solid var(--rose-400);
+  border-radius:   999px;
+  display:         flex;
+  flex-direction:  row;
+  align-items:     center;
+  justify-content: center;
+  width:           1.25rem;
+  height:          1.25rem;
+
+
+  svg {
+    height: 0.625rem;
+    width:  0.625rem;
+  }
+
+
+  &:hover {
+    border-color: black;
+    cursor: pointer;
+
+
+    svg path {
+      fill: black;
+    }
+  }
+
+}

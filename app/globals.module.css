@@ -1,0 +1,75 @@
+:root {
+  /* colors */
+  --red:      hsl(14 86 42);
+
+  --rose-900: hsl(14 65 9);
+  --rose-500: hsl(12 20 44);
+  --rose-400: hsl(7 20 60);
+  --rose-300: hsl(14 25 72);
+  --rose-100: hsl(13 31 94);
+  --rose-50:  hsl(20 50 98);
+
+  --green:    hsl(159 69 38);
+
+}
+
+
+@font-face {
+  font-family: "Red Hat Text", serif;
+  src:         url("/public/assets/fonts/RedHatText-VariableFont_wght.ttf");
+  font-style:  normal;
+  font-weight: 100 900;
+}
+
+
+.text_preset_1 {
+  font-size:      3.5rem;
+  line-height:    120%;
+  letter-spacing: 0;
+  font-weight:    700;
+  color:          var(--rose-900);
+}
+
+
+.text_preset_2 {
+  font-size:      1.5rem;
+  line-height:    125%;
+  letter-spacing: 0;
+  font-weight:    700;
+  color:          var(--rose-900);
+}
+
+
+.text_preset_3 {
+  font-size:      1rem;
+  line-height:    150%;
+  letter-spacing: 0;
+  font-weight:    600;
+  color:          var(--rose-900);
+}
+
+
+.text_preset_4 {
+  font-size:      0.875rem;
+  line-height:    150%;
+  letter-spacing: 0;
+  font-weight:    400;
+  color:          var(--rose-900);
+}
+.text_preset_4 {
+  font-size:      0.875rem;
+  line-height:    150%;
+  letter-spacing: 0;
+  font-weight:    700;
+  color:          var(--rose-900);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5rem;
+  margin-top: 5rem;
+  width: 16rem;
+  gap: 2rem;
+  background-color: var(--rose-50);
+}
