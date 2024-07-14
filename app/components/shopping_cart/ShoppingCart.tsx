@@ -191,7 +191,7 @@ export const ShoppingCart = ({confirmation = false}: ShoppingCartProps) => {
                     transition={{duration: 0.25}}
                     className={`${styles.cart_container} ${styles.confirmation_cart_container}`}>
           <ul
-            className={`${styles.added_items_list} `}>
+            className={`${styles.added_items_list} ${styles.confirmation_added_items_list}`}>
             {Object.keys(products).map((name, index) => (
               <React.Fragment key={index}>
                 <motion.li

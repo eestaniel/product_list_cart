@@ -2,6 +2,9 @@
 .confirmation_cart_container {
   background-color: var(--rose-50) !important;
   width:            100%;
+
+  max-height: 21.188rem;
+  overflow: auto;
 }
 
 
@@ -134,6 +137,11 @@
     }
   }
 
+  .confirmation_added_items_list {
+    max-height: 16.188rem;
+    overflow: auto;
+  }
+
 
   .main_divider {
     border-color: var(--rose-100);
@@ -176,8 +184,11 @@
 
 
 @media screen and (min-width: 1200px) {
+
+
   .confirmation_cart_container {
     max-width: revert !important;
+    max-height: revert !important;
   }
 
 
@@ -276,6 +287,10 @@
       }
     }
 
+  }
+
+  .confirmation_added_items_list {
+    max-height: 20rem;
   }
 
 }

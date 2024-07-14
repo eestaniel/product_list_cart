@@ -24,3 +24,9 @@
     }
   }
 }
+
+@media screen and (min-width: 1440px) {
+  max-height: 50rem;
+  height: 100%;
+
+}
