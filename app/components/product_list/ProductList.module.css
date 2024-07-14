@@ -36,8 +36,8 @@
 
 
       .list_container {
-        flex-direction: row;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
 
 
         .list_item {
@@ -54,14 +54,12 @@
     width: fit-content;
 
     .product_list {
-      max-width: 43rem;
-      min-width: 43rem;
       width: 100%;
 
 
       .list_container {
-        flex-direction: row;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
         row-gap: 2.5rem;
         column-gap: 1.5rem;
 
@@ -80,6 +78,7 @@
     width: 100%;
     min-width: 50rem;
     height: 100%;
+    padding-left: ;
 
 
     .product_list {

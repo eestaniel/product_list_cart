@@ -53,10 +53,7 @@
 
 @media screen and (min-width: 400px) {
   .img_button_group {
-    width: fit-content;
     img {
-      max-height: 212px;
-      width: auto;
     }
 
 
@@ -84,12 +81,7 @@
 
 @media screen and (min-width: 768px) {
   .img_button_group {
-    width: fit-content;
     img {
-      min-height: 13.25rem !important;
-      min-width: 13.313rem !important;
-      max-height: 13.25rem !important;
-      max-width: 13.313rem !important;
 
     }
 
@@ -120,11 +112,6 @@
   .img_button_group {
     width: fit-content;
     img {
-      min-height: 15rem !important;
-      max-height: 15rem !important;
-      width: 100%;
-      min-width: 15.625rem !important;
-      object-fit: fill ;
     }
 
 
