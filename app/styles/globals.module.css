@@ -79,6 +79,7 @@ body {
   background-color: var(--rose-50);
   min-height:       100vh;
   padding: 1.5rem;
+  transition: ease  1000ms;
 
 }
 
