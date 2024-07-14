@@ -40,6 +40,9 @@
   flex-direction: column;
   gap:            0.25rem;
 
+  .category {
+    color: var(--rose-500);
+  }
 
   .price {
     color: var(--red);

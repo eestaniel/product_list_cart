@@ -31,7 +31,7 @@ export const Card = ({product}: CardProps) => {
         </div>
       </motion.div>
       <div className={styles.item_info_group}>
-        <p className={globals.text_preset_4}>{product.category}</p>
+        <p className={`${globals.text_preset_4} ${styles.category}`}>{product.category}</p>
         <p className={globals.text_preset_3}>{product.name}</p>
         <p className={`${globals.text_preset_3} ${styles.price}`}>
           ${product.price.toFixed(2)}
