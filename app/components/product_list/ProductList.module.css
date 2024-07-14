@@ -18,7 +18,6 @@
       .list_item {
         display:        flex;
         flex-direction: column;
-        height:         19.938rem;
         gap:            2.375rem;
       }
 
@@ -52,11 +51,14 @@
 
 @media screen and (min-width: 768px) {
   .main_content {
-
+    width: fit-content;
 
     .product_list {
-      max-width: 50.063rem;
+      max-width: 43rem;
+      min-width: 43rem;
       width: 100%;
+
+
       .list_container {
         flex-direction: row;
         flex-wrap: wrap;
@@ -86,6 +88,7 @@
         row-gap: 2rem;
         column-gap: 1.5rem;
         width: 100%;
+        min-width: 50rem;
 
         .list_item {
 

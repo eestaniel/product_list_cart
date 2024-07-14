@@ -86,8 +86,11 @@
   .img_button_group {
     width: fit-content;
     img {
-      height: 13.25rem;
-      width: 13.313rem;
+      min-height: 13.25rem !important;
+      min-width: 13.313rem !important;
+      max-height: 13.25rem !important;
+      max-width: 13.313rem !important;
+
     }
 
 
@@ -117,9 +120,10 @@
   .img_button_group {
     width: fit-content;
     img {
-      min-height: 15rem;
+      min-height: 15rem !important;
+      max-height: 15rem !important;
       width: 100%;
-      max-width: 15.625rem !important;
+      min-width: 15.625rem !important;
       object-fit: fill ;
     }
 

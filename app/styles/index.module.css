@@ -10,8 +10,11 @@
 
 @media screen and (min-width: 768px){
   .container {
-    padding: 2.5rem;
     gap: 2rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
   }
 }
 
