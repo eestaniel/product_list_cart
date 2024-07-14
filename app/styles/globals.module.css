@@ -91,6 +91,8 @@ body {
 @media screen and (min-width: 1440px) {
   body {
     padding: 5.5rem 2.5rem;
+    justify-content: center;
+    align-items: center;
   }
 }
 
