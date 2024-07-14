@@ -17,7 +17,7 @@ export function Layout({children}: { children: React.ReactNode }) {
     <head>
       <title>Product List with Cart</title>
       <meta charSet="utf-8"/>
-      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <meta name="viewport" content="viewport-fit=cover, initial-scale=1"/>
 
       <Meta/>
       <Links/>

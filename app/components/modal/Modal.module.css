@@ -1,14 +1,14 @@
+/* Modal.module.css */
 .modalOverlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: env(safe-area-inset-top);
+  left: env(safe-area-inset-left);
+  right: env(safe-area-inset-right);
+  bottom: env(safe-area-inset-bottom);
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: end;
   z-index: 1000;
-
 }
 
 .modalContent {
@@ -22,10 +22,9 @@
   gap: 2rem;
   height: fit-content;
   justify-content: end;
-  bottom: 0;
+  bottom: env(safe-area-inset-bottom, 0);
   max-height: 44.813rem;
 }
-
 
 @media screen and (min-width: 768px) {
   .modalOverlay {
@@ -33,7 +32,6 @@
     flex-direction: row;
     justify-content: center;
     padding: 2.5rem;
-
   }
 
   .modalContent {
@@ -41,20 +39,15 @@
     margin-block: auto;
     padding: 2.5rem;
     width: 100%;
-
   }
-
 }
-
 
 @media screen and (min-width: 1440px) {
   .modalOverlay {
-
   }
 
   .modalContent {
     max-width: 37rem;
     max-height: 50rem;
   }
-
 }
