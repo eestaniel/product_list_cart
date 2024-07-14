@@ -63,14 +63,14 @@ export const CartButton = ({
             <div className={styles.svg_container}>
               <IconAddToCart/>
             </div>
-            <span>Add to Cart</span>
+            <span className={globals.text_preset_4_bold}>Add to Cart</span>
           </>
         ) : (
           <>
             <div onClick={handleDecrement}>
               <SubtractIcon/>
             </div>
-            <span>{ProductCart[product_name].quantity}</span>
+            <span className={globals.text_preset_4_bold}>{ProductCart[product_name].quantity}</span>
             <div onClick={handleIncrement}>
               <AddIcon/>
             </div>
