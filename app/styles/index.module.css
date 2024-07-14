@@ -3,7 +3,7 @@
   flex-direction: column;
   padding: 1.5rem;
   justify-content: start;
-  width: 100vw;
+  width: 100%;
   gap: 2rem;
   min-height: 100vh;
 }
@@ -19,8 +19,9 @@
   .container {
     flex-direction: row;
     align-items: revert;
-    justify-content: center;
-    padding: 0
+    padding: 0;
+    width: fit-content;
+    margin-inline: auto;
 
   }
 }

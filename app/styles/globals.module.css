@@ -75,11 +75,12 @@
 body {
   display:          flex;
   flex-direction:   column;
-  width:            16rem;
+  width: 100%;
   gap:              2rem;
   background-color: var(--rose-50);
   min-height:       100vh;
   padding: 5.5rem 2.5rem;
+
 
 }
 
