@@ -114,8 +114,10 @@
   .img_button_group {
     width: fit-content;
     img {
-      height: 15rem;
-      width: auto;
+      min-height: 15rem;
+      width: 100%;
+      max-width: 15.625rem !important;
+      object-fit: fill ;
     }
 
 
