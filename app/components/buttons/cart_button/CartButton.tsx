@@ -61,9 +61,9 @@ export const CartButton = ({ product_name }: CartButtonProps) => {
             animate={{ opacity: 1, scale: 1, transition: { duration: 0.05 }}}
             exit={{ opacity: 0, scale: 0.8, transition: { duration: 0.05 }}}
           >
-            <div onClick={handleDecrement}>
+            <motion.div onClick={handleDecrement} whileHover={{ scale: 1.1 }}>
               <SubtractIcon />
-            </div>
+            </motion.div>
             <motion.span
               key={ProductCart[product_name].quantity} // key change triggers re-animation
               className={globals.text_preset_4_bold}
@@ -73,9 +73,9 @@ export const CartButton = ({ product_name }: CartButtonProps) => {
             >
               {ProductCart[product_name].quantity}
             </motion.span>
-            <div onClick={handleIncrement}>
+            <motion.div onClick={handleIncrement} whileHover={{ scale: 1.1 }}>
               <AddIcon />
-            </div>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
