@@ -91,9 +91,9 @@ export const ShoppingCart = ({confirmation = false}: ShoppingCartProps) => {
                   animate={{opacity: 1}}
                   transition={{duration: 0.15}}
                   className={`${styles.cart_container}`}>
-        <h3 className={globals.text_preset_2}>
+        <h2 className={globals.text_preset_2}>
           Your Cart ({calculateTotalItems()})
-        </h3>
+        </h2>
         <div className={styles.empty_placeholder}>
           <EmptyCartIcon/>
           <p className={globals.text_preset_4_bold}>Your added items will appear

@@ -24,7 +24,6 @@ export const Card = ({product}: CardProps) => {
           className={`${isActive(product.name) && styles.active}`}
           src={product.image[getImageSize() as any]}
           alt={product.name}
-          loading="lazy"
         />
         <div className={styles.button_container}>
           <CartButton product_name={product.name}/>
